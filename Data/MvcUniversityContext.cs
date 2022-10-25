@@ -1,7 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using MvcUniversity.Models;
 
-public class UniversityContext : DbContext
+namespace MvcUniversity.Data;
+
+public class MvcUniversityContext : DbContext
 {
     public DbSet<Course> Courses { get; set; } = null!;
     public DbSet<Enrollement> Enrollements { get; set; } = null!;
@@ -10,7 +13,7 @@ public class UniversityContext : DbContext
 
     public string DbPath { get; private set; }
 
-    public UniversityContext()
+    public MvcUniversityContext()
     {
         // Path to SQLite database file
         DbPath = "EFUniversity.db";

@@ -1,7 +1,12 @@
+using MvcUniversity.Models;
+using MvcUniversity.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+// Attach an EF Core database context to each query
+builder.Services.AddDbContext<MvcUniversityContext>();
 
 var app = builder.Build();
 
@@ -25,3 +30,5 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+SeedData.Init();

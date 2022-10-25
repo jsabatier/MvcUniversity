@@ -1,8 +1,9 @@
+using MvcUniversity.Data;
 public class SeedData
 {
     public static void Init()
     {
-        var context = new UniversityContext();
+        var context = new MvcUniversityContext();
         Student carson = new Student
 {
     FirstName = "Alexander",
