@@ -1,9 +1,15 @@
 using MvcUniversity.Data;
 public class SeedData
 {
+    
     public static void Init()
     {
         var context = new MvcUniversityContext();
+       
+        if(context.Students.Any())
+            {
+                return;
+            }
         Student carson = new Student
 {
     FirstName = "Alexander",
