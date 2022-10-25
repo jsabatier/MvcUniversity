@@ -2,18 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using MvcUniversity.Data;
 
 #nullable disable
 
 namespace MvcUniversity.Migrations
 {
-    [DbContext(typeof(UniversityContext))]
-    [Migration("20221025065552_InitialCreate")]
-    partial class InitialCreate
+    [DbContext(typeof(MvcUniversityContext))]
+    partial class MvcUniversityContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.10");
